@@ -1,0 +1,26 @@
+/* Diseño para la fila de componentes dentro de la vista Ejercicios */
+.components-row {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 1rem 0;
+}
+
+/* Hacer que cada componente hijo tenga un ancho razonable en pantallas grandes */
+.components-row > * {
+	flex: 1 1 320px; /* crecer, reducir, ancho base */
+	max-width: 720px;
+}
+
+@media (max-width: 640px) {
+	.components-row {
+		gap: 0.75rem;
+		padding: 0.5rem 0;
+	}
+	.components-row > * {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,51 @@
+:host {
+	display: block;
+	/* dejar que el elemento flex padre controle el dimensionado horizontal; eliminar el centrado automático */
+	width: 100%;
+	max-width: 680px;
+	margin: 1.5rem 0;
+	padding: 1rem;
+	box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+	border-radius: 10px;
+	background: white;
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	color: #111827;
+}
+
+.mensajes p {
+	margin: 0.5rem 0;
+	font-size: 1rem;
+}
+
+
+button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 0.75rem;
+	padding: 0.5rem 0.75rem;
+	background: linear-gradient(90deg,#6366f1,#ec4899);
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+button:hover {
+	transform: translateY(-1px);
+	-webkit-box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 5px 5px 24px 6px rgba(0,0,0,0); 
+    box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 5px 5px 24px 6px rgba(0,0,0,0);
+}
+
+@media (max-width: 480px) {
+	:host {
+		margin: 1rem;
+		padding: 0.75rem;
+	}
+	button {
+		width: 100%;
+		justify-content: center;
+	}
+}
+

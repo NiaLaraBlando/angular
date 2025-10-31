@@ -1,0 +1,38 @@
+<section class="movie-list">
+	<h2 class="movie-list-title">Películas</h2>
+
+	<div class="scroller-wrap">
+		<button
+			class="scroll-btn left"
+			*ngIf="canScrollLeft"
+			(click)="scrollLeft()"
+			aria-label="Scroll left"
+		>
+			<span aria-hidden>‹</span>
+		</button>
+
+		<div class="movie-scroller" role="list" #scroller (scroll)="onScroll()">
+			<ng-container *ngFor="let movie of movies">
+				<app-movie-item
+					[movie]="movie"
+					(movieSelected)="onMovieSelected($event)"
+				></app-movie-item>
+			</ng-container>
+		</div>
+
+		<button
+			class="scroll-btn right"
+			*ngIf="canScrollRight"
+			(click)="scrollRight()"
+			aria-label="Scroll right"
+		>
+			<span aria-hidden>›</span>
+		</button>
+	</div>
+
+	<div class="selected-info" *ngIf="selectedMovie">
+		<h3>Seleccionada</h3>
+		<p class="sel-title">{{ selectedMovie.title }} ({{ selectedMovie.year }})</p>
+		<p class="sel-desc">{{ selectedMovie.description }}</p>
+	</div>
+</section>

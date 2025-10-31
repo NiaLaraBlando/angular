@@ -1,0 +1,26 @@
+/* Emparejar el estilo visual del encabezado: degradado verde suave, elevación sutil */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.25rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02));
+    box-shadow: 0 -6px 18px rgba(0,0,0,0.6);
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0;
+    color: var(--muted, #9aa6b2);
+    font-family: 'Poppins', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 520px) {
+    footer { padding: 0.65rem 0.9rem; }
+    footer p { font-size: 0.9rem; }
+}

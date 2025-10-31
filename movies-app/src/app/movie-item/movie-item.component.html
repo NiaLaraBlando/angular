@@ -1,0 +1,12 @@
+<div class="movie-card" role="listitem">
+	<img [src]="movie.cover" [alt]="movie.title + ' cover'" />
+
+	<div class="movie-meta">
+		<div class="year">{{ movie.year }}</div>
+		<p class="desc" *ngIf="movie.description">{{ movie.description }}</p>
+	</div>
+
+	<div class="actions">
+		<button type="button" (click)="selectMovie()">Seleccionar</button>
+	</div>
+</div>

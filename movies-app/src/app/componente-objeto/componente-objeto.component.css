@@ -1,0 +1,75 @@
+:host {
+	display: block;
+	box-sizing: border-box;
+	padding: 1rem;
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+	color: #111827;
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.objeto-title {
+	font-weight: 600;
+	margin: 0 0 0.5rem 0;
+}
+
+.objeto-body {
+	font-size: 0.95rem;
+	color: #374151;
+}
+
+/* Pares propiedad/valor con color - propiedad saturada, valor en tonos pastel */
+.objeto-pair {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	margin: 0.4rem 0;
+}
+.objeto-pair .prop {
+	font-weight: 700;
+	min-width: 72px;
+}
+.objeto-pair .val {
+	padding: 0.18rem 0.5rem;
+	border-radius: 6px;
+	font-weight: 600;
+}
+
+/* Título - azul */
+.objeto-pair.title .prop { color: #075985; }
+.objeto-pair.title .val.title-val { background: rgba(14,165,233,0.12); color: #0ea5e9; }
+
+/* Año - teal/cian */
+.objeto-pair.year .prop { color: #0f766e; }
+.objeto-pair.year .val.year-val { background: rgba(6,182,212,0.12); color: #06b6d4; }
+
+/* Director - violeta */
+.objeto-pair.director .prop { color: #5b21b6; }
+.objeto-pair.director .val.director-val { background: rgba(139,92,246,0.11); color: #8b5cf6; }
+
+/* Género - coral/rosa */
+.objeto-pair.genre .prop { color: #9f1239; }
+.objeto-pair.genre .val.genre-val { background: rgba(251,113,133,0.10); color: #fb7185; }
+
+@media (max-width: 420px) {
+	.objeto-pair { flex-direction: column; align-items: flex-start; }
+	.objeto-pair .prop { min-width: auto; }
+}
+
+@media (max-width: 650px) {
+	:host { padding: 0.75rem; }
+}
+
+/* Estilos de icono - pequeños, heredan el color de la propiedad */
+.prop-icon {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	vertical-align: -0.125em;
+	margin-right: 0.4rem;
+	fill: currentColor;
+}
+
+/* Reducir ligeramente el tamaño del icono dentro de la propiedad para que el texto se alinee mejor */
+.objeto-pair .prop { display: inline-flex; align-items: center; gap: 0.25rem; }

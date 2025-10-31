@@ -1,0 +1,10 @@
+<header>
+  <div class="header-inner">
+    <h1>{{ title }}</h1>
+    <p class="subtitle">{{ activeView }}</p>
+  </div>
+  <div class="nav-buttons" role="navigation" aria-label="Main views">
+    <button (click)="selectView('ejercicios')" [class.active]="currentView === 'ejercicios'">Ejercicios</button>
+    <button (click)="selectView('peliculas')" [class.active]="currentView === 'peliculas'">Películas</button>
+  </div>
+</header>

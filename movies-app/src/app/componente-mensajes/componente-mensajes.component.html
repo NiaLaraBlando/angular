@@ -1,0 +1,11 @@
+<div class="mensajes">
+  <p>{{ message1 }}</p>
+
+  <div *ngIf="showSecondMessage" id="second-message" role="region">
+    <p>{{ message2 }}</p>
+  </div>
+
+  <button (click)="showSecondMessage = !showSecondMessage" [attr.aria-expanded]="showSecondMessage" aria-controls="second-message">
+    {{ showSecondMessage ? 'Ocultar segundo mensaje' : 'Mostrar segundo mensaje' }}
+  </button>
+</div>

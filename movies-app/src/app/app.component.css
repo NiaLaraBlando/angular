@@ -1,0 +1,11 @@
+/* Estructura de la app para mantener el pie en la parte inferior */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Asegurar que el contenido renderizado por router-outlet pueda crecer */
+router-outlet {
+  display: block;
+}

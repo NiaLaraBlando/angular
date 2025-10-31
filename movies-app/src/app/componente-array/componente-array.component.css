@@ -1,0 +1,51 @@
+/* Importar una fuente moderna y amigable para este componente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:host {
+	display: block;
+	padding: 0.9rem 1rem;
+	box-sizing: border-box;
+	background: white;
+	border-radius: 10px;
+}
+
+:host p {
+	display: inline-block;
+	margin: 0.45rem 0.5rem 0.45rem 0;
+	padding: 0.5rem 0.85rem;
+	border-radius: 999px;
+	color: #fff;
+	font-family: 'Poppins', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+	font-weight: 600;
+	font-size: 0.95rem;
+	letter-spacing: 0.2px;
+	box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+	transition: transform 180ms cubic-bezier(.2,.8,.2,1), box-shadow 180ms ease;
+}
+
+:host p:hover {
+	transform: translateY(-4px) scale(1.02);
+	box-shadow: 0 12px 30px rgba(16,24,40,0.12);
+}
+
+/* Tonos únicos por elemento de la lista (usar nth-child para no cambiar el marcado) */
+:host p:nth-child(1) {
+	background: linear-gradient(90deg,#6366f1,#8b5cf6); /* índigo -> violeta */
+}
+:host p:nth-child(2) {
+	background: linear-gradient(90deg,#06b6d4,#06b6d4aa); /* cian */
+}
+:host p:nth-child(3) {
+	background: linear-gradient(90deg,#10b981,#34d399); /* verde */
+}
+:host p:nth-child(4) {
+	background: linear-gradient(90deg,#fb7185,#f97316); /* coral -> naranja */
+}
+
+/* Fondos en tonos pastel como fallback para listas largas (saturación reducida) */
+:host p.pastel { background: rgba(99,102,241,0.14); color: #0f172a; }
+
+@media (max-width: 520px) {
+	:host p { font-size: 0.9rem; padding: 0.45rem 0.7rem; }
+}
+
